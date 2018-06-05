@@ -1,0 +1,13 @@
+name: 'Abzats Pizza Demo'
+description: 'Demo content for Abzats Pizza theme.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - image
+  - menu_ui
+  - node
+  - path
+  - system
+  - text
+  - user

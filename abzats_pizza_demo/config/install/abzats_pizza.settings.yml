@@ -1,0 +1,11 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+abzats_pizza_contact: "<h4>Contact</h4>\r\n<p> Address of your beautiful cafe.<br>\r\n        Phone: 000.000.0000 <br>\r\n        Email : <a href=\"mailto:your-mail@gmail.com\"> your-mail@gmail.com </a>\r\n</p>"
+abzats_pizza_copyright: '<p>© 2018 All rights reserved.</p>'
