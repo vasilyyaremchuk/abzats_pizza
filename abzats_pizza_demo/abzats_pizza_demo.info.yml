@@ -3,7 +3,9 @@ description: 'Demo content for Abzats Pizza theme.'
 type: module
 core: 8.x
 dependencies:
+  - block
   - field
+  - file
   - image
   - menu_ui
   - node
@@ -11,3 +13,5 @@ dependencies:
   - system
   - text
   - user
+  - views
+  - twig_tweak

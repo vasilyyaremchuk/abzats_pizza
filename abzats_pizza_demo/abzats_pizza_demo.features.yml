@@ -1,1 +1,6 @@
+excluded:
+  - block.block.abzats_pizza_main_menu
+  - block.block.bartik_main_menu
+  - views.view.glossary
+  - system.menu.main
 required: true
