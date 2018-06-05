@@ -99,7 +99,7 @@ ul li {
 #header {
 	position: fixed;
 	width: 100%;
-	z-index: 999;
+	z-index: 100;
 }
 #header .header-content {
 	margin: 0 auto;

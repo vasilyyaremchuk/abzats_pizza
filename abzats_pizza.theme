@@ -1,0 +1,78 @@
+<?php
+
+function abzats_pizza_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['abzats_pizza'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Footer Information'),
+  );
+
+  $form['abzats_pizza']['abzats_pizza_contact'] = array(
+    '#type'          => 'textarea',
+    '#title'         => t('Contact Information'),
+    '#default_value' => theme_get_setting('abzats_pizza_contact'),
+    '#description'   => t('Left footer info block: Contact block.'),
+    '#format' => 'full_html',
+  );
+
+  $form['abzats_pizza']['abzats_pizza_copyright'] = array(
+    '#type'          => 'textarea',
+    '#title'         => t('Copyright Information'),
+    '#default_value' => theme_get_setting('abzats_pizza_copyright'),
+    '#description'   => t('Right footer info block: Copyright block.'),
+  );
+
+}
+
+/*function abzats_pizza_preprocess_page(&$variables) {
+  $variables['abzats_pizza_contact'] = theme_get_setting('abzats_pizza_contact');
+  $variables['abzats_pizza_copyright'] = theme_get_setting('abzats_pizza_copyright');
+}*/
+
+/*
+* implement hook_token_info()
+*/
+/*function abzats_pizza_token_info(){
+  $types['abzats_footer'] = array(
+    'name' => t('Footer Information'),
+    'description' => t('These tokens pass information from theme settings to the template.'),
+  );  
+  $tokens['abzats_pizza_contact'] = array(
+    'name' => t('Contact Information'),
+    'description' => t('Left footer info block: Contact block.'),
+  );
+  $tokens['abzats_pizza_copyright'] = array(
+    'name' => t('Copyright Information'),
+    'description' => t('Right footer info block: Copyright block.'),
+  );
+  return array(
+    'types' => $types,
+    'tokens' => array(
+      'abzats_footer' => $tokens
+    )
+  );  
+}*/
+
+/*
+* implement hook_token()
+*/
+/*function abzats_pizza_tokens($type, $tokens, array $data, array $options, Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata){
+  $replacements = array();
+  if($type == 'custom_token_type') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'abzats_pizza_contact':
+        $replacements[$original] = theme_get_setting('abzats_pizza_contact');
+        break;
+        case 'abzats_pizza_copyright':
+        $replacements[$original] = theme_get_setting('abzats_pizza_copyright');
+        break;
+      }
+    }
+  }
+  return $replacements;
+}*/

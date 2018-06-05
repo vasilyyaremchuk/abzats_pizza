@@ -1,0 +1,8 @@
+name: Abzats Pizza
+type: theme
+description: Abzats Pizza demo Twig tweak theme.
+core: 8.x
+base theme: classy
+libraries:
+ - abzats_pizza/global-styling
+ 

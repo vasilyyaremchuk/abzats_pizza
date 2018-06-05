@@ -1,3 +1,4 @@
+(function ($) {
 $(document).ready(function() {
 	// Header Scroll
 	$(window).on('scroll', function() {
@@ -50,3 +51,4 @@ $(document).ready(function() {
 		nav.toggleClass('open');
 	});
 });
+}(jQuery));

@@ -1,0 +1,48 @@
+<!-- Header Section -->
+<section class="banner" role="banner"> 
+  <!-- Navigation Section -->
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="#">{{ drupal_config('system.site', 'name') }}</a>
+  </header>
+  <!-- Navigation Section --> 
+</section>
+<!-- Header Section --> 
+{{ drupal_messages() }}
+<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+<!-- Intro Section -->
+<section class="section introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h1>{{ drupal_title() }}</h1>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="intro-content">
+          {{ drupal_field('body', 'node') }}
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="intro-content">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Intro Section --> 
+
+<!-- footer section -->
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="col-md-4">
+      {{ drupal_config('abzats_pizza.settings', 'abzats_pizza_contact')|raw }}
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-5">
+      {{ drupal_config('abzats_pizza.settings', 'abzats_pizza_copyright')|raw }}
+    </div>
+  </div>
+</footer>
+<!-- footer section --> 

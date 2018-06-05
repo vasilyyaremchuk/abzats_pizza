@@ -15,10 +15,7 @@
       {{ 'Skip to main content'|t }}
     </a>
     {{ page_top }}
-    <h1>{{ drupal_config('system.site', 'name') }}</h1>
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    <h2>{{ drupal_title() }}</h2>
-    {{ drupal_field('body', 'node') }}
+    {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>

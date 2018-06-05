@@ -1,0 +1,17 @@
+global-styling:
+  version: VERSION
+  js:
+    js/bootstrap.min.js: {}
+    js/jquery.fancybox.pack.js: {}
+    js/modernizr.js: {}
+    js/main.js: {}
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/jquery.fancybox.css: {}
+      css/main.css: {}
+      css/responsive.css: {}
+      css/animate.min.css: {}
+      //maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css: { type: external, minified: true }
+  dependencies:
+    - drupal/jquery

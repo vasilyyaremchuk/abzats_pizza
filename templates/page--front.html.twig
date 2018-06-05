@@ -1,0 +1,63 @@
+<!-- Header Section -->
+<section class="banner" role="banner"> 
+  <!-- Navigation Section -->
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="#">{{ drupal_config('system.site', 'name') }}</a>
+      <nav class="navigation" role="navigation">
+        {{ drupal_menu('main') }}
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!-- Navigation Section --> 
+</section>
+<!-- Header Section --> 
+{{ drupal_messages() }}
+<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+<!-- Intro Section -->
+<section id="introduction" class="section introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h1>{{ drupal_title() }}</h1>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="intro-content">
+          {{ drupal_field('body', 'node') }}
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="intro-content">
+          {{ drupal_field('field_right_side', 'node') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Intro Section --> 
+
+<!-- work section -->
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      {{ drupal_field('field_gallery', 'node') }}
+    </div>
+  </div>
+</section>
+<!-- work section --> 
+
+<!-- footer section -->
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="col-md-4">
+      {{ drupal_config('abzats_pizza.settings', 'abzats_pizza_contact')|raw }}
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-5">
+      {{ drupal_config('abzats_pizza.settings', 'abzats_pizza_copyright')|raw }}
+    </div>
+  </div>
+</footer>
+<!-- footer section --> 

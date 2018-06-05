@@ -1,0 +1,13 @@
+{% if url %}
+  <a href="{{ url }}" class="work-box">
+    {{ image }}
+    <div class="overlay">
+      <div class="overlay-caption">
+        <p><i class="fa fa-search-plus fa-2x"></i></p>
+      </div>
+    </div>
+    <!-- overlay --> 
+  </a>
+{% else %}
+  {{ image }}
+{% endif %}
