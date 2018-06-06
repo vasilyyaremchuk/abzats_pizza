@@ -12,6 +12,6 @@ dependencies:
   - path
   - system
   - text
+  - twig_tweak
   - user
   - views
-  - twig_tweak

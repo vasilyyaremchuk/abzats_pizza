@@ -7,6 +7,7 @@
 
 use Drupal\node\Entity\Node;
 use Drupal\Core\Url;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
 
 /**
  * Implements hook_install().
@@ -60,6 +61,26 @@ function abzats_pizza_demo_install() {
   $config = \Drupal::service('config.factory')->getEditable('system.site');
   $config->set('page.front', '/node/' . $node->id());
   $config->save();
+
+  // Menu links
+  $items = array(
+    '#introduction' => 'About Us',
+    '#works' => 'Pizza',
+    '#contact' => 'Contact Us'
+  );
+  $i = 1;
+  foreach($items as $key => $title) {
+    $menu_link = MenuLinkContent::create([
+      'title' => $title,
+      'link' => ['uri' => 'internal:' . $key],
+      'menu_name' => 'front',
+      'expanded' => TRUE,
+      'weight' => $i,
+    ]);
+    $menu_link->save();
+    $i++;
+  }
+
 }
 
 /**
@@ -82,4 +103,8 @@ function abzats_pizza_demo_uninstall() {
       }
     }
   }
+
+  // Delete Front menu
+  // $menu = \Drupal::entityTypeManager()->getStorage('menu')->load('front');
+  // $menu->delete();
 }
